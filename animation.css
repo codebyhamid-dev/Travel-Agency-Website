@@ -1,0 +1,37 @@
+/* Base style for elements to be animated */
+.animated {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* When the element becomes visible */
+  .animated.visible {
+    opacity: 1;
+    transform: none;
+  }
+  
+  /* Specific Animation Classes */
+  .fadeIn {
+    transform: translateY(20px);
+  }
+  
+  .slideInLeft {
+    transform: translateX(-100px);
+  }
+  
+  .slideInRight {
+    transform: translateX(100px);
+  }
+  
+  .zoomIn {
+    transform: scale(0.8);
+  }
+  
+  /* When .visible is added, the element animates to its default state */
+  .animated.fadeIn.visible,
+  .animated.slideInLeft.visible,
+  .animated.slideInRight.visible,
+  .animated.zoomIn.visible {
+    transform: translate(0);
+  }
+  
